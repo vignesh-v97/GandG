@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/assets/images/logo-dark.png" type="image/x-icon">
+    <title>GRIDS AND GUIDES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="container">
+        <div class="content">
+            <h1>GRIDS AND GUIDES</h1>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <h1>Ssction 1</h1>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <h1>Section 2</h1>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <h1>Section 3</h1>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <h1>Section 4</h1>
+        </div>
+    </section>
+
+
+    <video id="v0" style="width: 100%;">
+        <source type='video/webm;' src="/assets/globe.mov">
+        </source>
+    </video>
+    <script>
+        var frameNumber = 0,
+            playbackConst = 1000,
+            setHeight = document.getElementById("set-height"),
+            vid = document.getElementById('v0');
+
+        vid.addEventListener('loadedmetadata', function () {
+            setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+        });
+
+
+        function scrollPlay() {
+            var frameNumber = window.pageYOffset / playbackConst;
+            vid.currentTime = frameNumber;
+            window.requestAnimationFrame(scrollPlay);
+        }
+
+        window.requestAnimationFrame(scrollPlay);
+
+        $(document).ready(function () {
+            $(this).scrollTop(0);
+        });
+    </script>
+</body>
+
+</html>
