@@ -1,16 +1,21 @@
 body {
     background-color: #c6d7de;
     font-family: 'Montserrat';
-    padding: 3em;
     color: #ffffff;
 }
 
-#video {
+.header {
+    background-image: url(./assets/images/children_excited.jpg);
+    background-size: cover;
+
+}
+
+/* #video {
     position: fixed;
     bottom: 0;
     right: 0;
     width: 100%;
-}
+} */
 
 
 section {
@@ -22,18 +27,20 @@ section {
     height: 100vh;
 }
 
-#header {
+.header-body {
     position: absolute;
     top: 20%;
 }
 
 .swiper-container {
     width: 100%;
-    height: 100%;
 }
 
 .swiper-slide {
     width: 100%;
-    height: 100%;
-    margin-bottom: 2rem;
+    height: 200px !important;
+}
+
+.scope-slide {
+    height: 300px !important;
 }
